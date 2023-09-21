@@ -20,19 +20,31 @@
 
     <br><br>
     <div class="container mt-lg-4 text-center">
-
         <div class="alert alert-primary my-4" role="alert">
             <h3>
-                <small>
-                    Waktu Mengecek Isi Pesan
-                </small>
-                <br> 00:04 - 04:06 - 06:09 - 09:13 - 13:16 - 16:18 - 18:21 - 21:00
+                Pesan Yang Di Sampaikan Berbeda-Beda <br> Sesuai Dengan Waktu
+                <br>
+                <div class="text-danger">
+                    <span id="jam"></span> : <span id="menit"></span> : <span id="detik"></span>
+                </div>
             </h3>
         </div>
         <br>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+    <script>
+        window.setTimeout("waktu()", 1000);
+
+        function waktu() {
+            var waktu = new Date();
+            setTimeout("waktu()", 1000);
+            document.getElementById("jam").innerHTML = waktu.getHours();
+            document.getElementById("menit").innerHTML = waktu.getMinutes();
+            document.getElementById("detik").innerHTML = waktu.getSeconds();
+        }
     </script>
 
     <script>
